@@ -166,11 +166,21 @@ This API provides data related to various characters, races, and locations from 
   }
   ```
 - **404 Not Found:** If a requested tool is not found, the response will be:
+
   ```json
   {
     "status": 404,
     "error": "Not Found",
     "message": "No tool found with the name '{name}'"
+  }
+  ```
+
+  **409 Too many requests:** If there's more than 25 requests sent in 3 mins, the response will be:
+
+  ```json
+  {
+    "status": 409,
+    "error": "Too many requests, please try again later."
   }
   ```
 
@@ -193,9 +203,13 @@ This API provides data related to various characters, races, and locations from 
 
 - Node.js
 - Express.js
-- EJS (Embedded JavaScript)
+- React.js
 - CORS
 - Body-parser
+- Axios
+- RateLimit
+- Material UI
+- Bootstrap
 
 ## Data Sources
 
